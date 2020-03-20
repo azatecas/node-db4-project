@@ -9,7 +9,7 @@ exports.up = function(knex) {
             tbl.increments();
             tbl.string("steps", 255).notNullable();
             tbl.string("details", 255).notNullable();
-            tbl.interger("recipieId").unsigned().references("id").inTable('recipies').onUpdate("CASCADE").onDelete("CASCADE")
+            tbl.integer("recipieId").unsigned().references("id").inTable('recipies').onUpdate("CASCADE").onDelete("CASCADE")
         })
         .createTable("ingredients", tbl => {
             tbl.increments();
